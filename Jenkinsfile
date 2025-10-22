@@ -40,7 +40,7 @@ pipeline {
                 // -p 8080:80 maps your computer's port 8080 to the container's port 80
                 bat 'docker run -d --name day2-web-app -p 8081:80 my-day2-app:latest'
 
-                echo 'Deployment successful! Check http://localhost:8080'
+                echo 'Deployment successful! Check http://localhost:8081'
             }
         }
     }
