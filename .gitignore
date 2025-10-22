@@ -1,0 +1,6 @@
+# Ignore IDE specific files
+.vscode/
+
+# Ignore Jenkins-related build artifacts if any
+target/
+build/
