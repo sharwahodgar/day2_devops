@@ -25,22 +25,3 @@ The Jenkins pipeline is defined in the `Jenkinsfile` and executes the following 
     * Stops and removes any previous container named `day2-web-app`.
     * Launches the new Docker image on the host's **port 8081**.
 
----
-
-## 📸 Proof of Execution
-
-### 1. Successful Jenkins Build Log
-
-This screenshot confirms the pipeline completed all stages successfully and shows the deployment URL is correctly set to 8081.
-
-
-
-### 2. Deployed Application (Port 8081)
-
-This image shows the application running live in the browser, confirming the successful deployment of the Docker container.
-
-
-
-### 3. Jenkins Dashboard (Port 8080)
-
-This image shows the Jenkins dashboard, which runs on a separate port (8080) to manage the pipeline itself.
