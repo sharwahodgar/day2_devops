@@ -12,7 +12,7 @@ pipeline {
                 echo 'Starting Build Stage: Creating Docker Image...'
                 // Command to tell Docker to build the image using the 'Dockerfile'
                 // -t tags the image as 'my-day2-app'
-                sh 'docker build -t my-day2-app:latest .'
+                bat 'docker build -t my-day2-app:latest .'
             }
         }
 
@@ -22,7 +22,7 @@ pipeline {
                 echo 'Starting Test Stage: Performing quick validation...'
                 // For this simple project, we'll just print a message,
                 // but a real project would run actual code tests here.
-                sh 'echo "Simulated tests passed successfully!"'
+                bat 'echo "Simulated tests passed successfully!"'
             }
         }
 
@@ -33,12 +33,12 @@ pipeline {
 
                 // Stop and remove any old running container with the same name
                 // '|| true' means ignore the error if it doesn't exist yet
-                sh 'docker rm -f day2-web-app || true'
+                bat 'docker rm -f day2-web-app || true'
 
                 // Run the new container, exposing it on port 8080
                 // -d runs it in the background
                 // -p 8080:80 maps your computer's port 8080 to the container's port 80
-                sh 'docker run -d --name day2-web-app -p 8080:80 my-day2-app:latest'
+                bat 'docker run -d --name day2-web-app -p 8080:80 my-day2-app:latest'
 
                 echo 'Deployment successful! Check http://localhost:8080'
             }
