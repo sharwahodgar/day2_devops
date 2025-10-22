@@ -38,7 +38,7 @@ pipeline {
                 // Run the new container, exposing it on port 8080
                 // -d runs it in the background
                 // -p 8080:80 maps your computer's port 8080 to the container's port 80
-                bat 'docker run -d --name day2-web-app -p 8080:80 my-day2-app:latest'
+                bat 'docker run -d --name day2-web-app -p 8081:80 my-day2-app:latest'
 
                 echo 'Deployment successful! Check http://localhost:8080'
             }
